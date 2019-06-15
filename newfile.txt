@@ -1,3 +1,9 @@
 file branch master add 23:33
 
+<<<<<<< HEAD
 master add newline at 23:34
+=======
+dev alter file in 23:36
+
+dev alter file in 23:38 ? /
+>>>>>>> 17a69
