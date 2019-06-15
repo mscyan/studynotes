@@ -24,7 +24,8 @@ output: pdf_document
 ***以上事务的隔离级别由上往下安全性递增，但是会使得服务的效率下降，比如串行化隔离级别会事务依次执行，在高并发中，服务的效率会非常低，这种方式即性能换安全***
 
 并发事务和隔离级别的具体影响关系如下：
-|-|脏读|不可重复读|幻读|
+
+|隔离级别|脏读|不可重复读|幻读|
 |:--:|:--:|:---|:--:|
 |__READ_UNCOMMITED__|possible|possible|possible|
 |__READ_COMMITED__  |impossible|possible|possible|
