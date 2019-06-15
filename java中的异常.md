@@ -1,17 +1,13 @@
----
-title: 'java中的异常机制'
-output: pdf_document
----
 
-###Throwable
+### Throwable
 Throwable是java中所有异常的祖先
 
-####Exception
-######平时用的最多的异常类，指程序本身可以处理的异常
+#### Exception
+###### 平时用的最多的异常类，指程序本身可以处理的异常
 Exception类有一个重要的子类RuntimeException，RuntimeException类及其子类表示“JVM常用操作”引发的错误。例如试图使用空值对象引用，除数为0或者数组越界等
 
-####Error
-######程序无法处理的错误
+#### Error
+###### 程序无法处理的错误
 Error一般指程序中较严重的问题，大多数Error表示代码运行时JVM出现的错误，比如Virtual Machine Error，比如内存不足时出现的OutOfMemoryError或者StackOverflowError，这些异常发生时，JVM一般会选择终止线程。
 
 ***异常和错误的区别：Exception可以被处理，Error无法处理***
