@@ -24,12 +24,12 @@ output: pdf_document
 ***以上事务的隔离级别由上往下安全性递增，但是会使得服务的效率下降，比如串行化隔离级别会事务依次执行，在高并发中，服务的效率会非常低，这种方式即性能换安全***
 
 并发事务和隔离级别的具体影响关系如下：
-||脏读|不可重复读|幻读|
-|:-:|:-:|:-:|:-:|
-|READ_UNCOMMITED|possible|possible|possible|
-|READ_COMMITED  |impossible|possible|possible|
-|REPEATABLE_READ|impossible|impossible|possible|
-|SERIALIZABLE   |impossible|impossible|impossible|
+|-|脏读|不可重复读|幻读|
+|:--:|:--:|:---|:--:|
+|__READ_UNCOMMITED__|possible|possible|possible|
+|__READ_COMMITED__  |impossible|possible|possible|
+|__REPEATABLE_READ__|impossible|impossible|possible|
+|__SERIALIZABLE__   |impossible|impossible|impossible|
 
 #####事务的传播行为
 事务的传播行为特别在spring中被声明，TransactionDefinition接口中规定了7中类型的事务传播行为。事务传播行为是springframework独有的事务增强特性，与数据库无关。笼统的描述，就是**某一个事务发生时被嵌套进了另一个事务时，事务如何传播**
