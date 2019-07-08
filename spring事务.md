@@ -1,7 +1,7 @@
-<!-- ---
-title: 'spring的事务'
+---
+title: '事务的隔离级别以及Spring中事务的传播行为'
 output: pdf_document
---- -->
+---
 
 *spring为持久层提供了事务支持，并提供了事务传播行为以及隔离级别等操作*
 
