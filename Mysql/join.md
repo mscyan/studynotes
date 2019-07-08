@@ -1,4 +1,4 @@
-#mysql中的join查询
+##mysql中的join查询
 
 连接查询分为内连接和外连接
 
