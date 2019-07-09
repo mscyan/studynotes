@@ -41,27 +41,27 @@ _成员包括属性和方法_
 ##### 1.组合和聚合的区别
 聚合关系中，整体消亡但个体仍然存在，比如国家消亡，但人仍然存在，而在组合关系中，整体消亡则个人随之消亡，比如公司破产，部门自然也随之不存在，在代码层面则是：
 聚合
-
-    Class Group{
-        Item item;
-        //即使整体消亡，个体仍然是存活的
-        public Group(Item item){
-            this.item = item;
-        }
+```java
+Class Group{
+    Item item;
+    //即使整体消亡，个体仍然是存活的
+    public Group(Item item){
+        this.item = item;
     }
-
+}
+```
 组合
-
-    Class Person{
-        Finger finger;
-        Hair hair;
-        //一旦整体消亡，部分则立即消亡
-        public Person(){
-            this.finger = new Finger();
-            this.hair = new Hair();
-        }
+```java
+Class Person{
+    Finger finger;
+    Hair hair;
+    //一旦整体消亡，部分则立即消亡
+    public Person(){
+        this.finger = new Finger();
+        this.hair = new Hair();
     }
-
+}
+```
 另外，可以从信息的安全性上考量，聚合关系中，外界能发现部分的存在，而在组合关系中，外界无法发现部分的存在；
 从建立关系的方式上来看，聚合隐含着一种“召集”的含义，比如Group召集了Item对象为其服务。而组合更像是一种“产生出xx”的形式，比如Company一旦构建完成，就会立即构建部门来为其服务。
 
